@@ -1,0 +1,13 @@
+conda deactivate
+cd ~/epistasia
+source .venv/bin/activate
+mkdocs serve
+http://127.0.0.1:8000/epistasia_web/
+
+Actualizar
+
+cd ~/epistasia
+git add -A
+git commit -m "Update docs"
+git push
+mkdocs gh-deploy -f epistasia_web/mkdocs.yml --clean
